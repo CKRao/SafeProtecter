@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.clark.safeprotecter.View.MainActivity">
+
+    <TextView
+        android:id="@+id/id_title"
+        style="@style/TextStyle"
+        android:text="@string/title1"/>
+
+    <TextView
+        android:id="@+id/id_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_title"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="曾经沧海难为水，除却巫山不是云，取次花丛懒回顾，半缘修道半缘君"
+        android:textSize="20sp"/>
+    <!--numColumns是设置GridView列数-->
+    <!--verticalSpacing设置竖直方向item间距-->
+
+    <GridView
+        android:verticalSpacing="10dp"
+        android:id="@+id/gridView"
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_tx">
+
+    </GridView>
+</RelativeLayout>

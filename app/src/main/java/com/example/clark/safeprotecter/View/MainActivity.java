@@ -1,5 +1,6 @@
 package com.example.clark.safeprotecter.View;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,7 +44,29 @@ public class MainActivity extends AppCompatActivity {
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+               switch (position){
+                   case 0:
 
+                       break;
+                   case 1:
+                       break;
+                   case 2:
+                       break;
+                   case 3:
+                       break;
+                   case 4:
+                       break;
+                   case 5:
+                       break;
+                   case 6:
+                       break;
+                   case 7:
+                       break;
+                   case 8:
+                       Intent intent = new Intent(getApplicationContext(),SettingActivity.class);
+                       startActivity(intent);
+                       break;
+               }
             }
         });
     }

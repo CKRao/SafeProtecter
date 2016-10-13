@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/item_text"
         android:text="Test"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:gravity="center"/>
 
 </LinearLayout>

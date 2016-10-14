@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              xmlns:clark="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
@@ -8,8 +8,13 @@
     android:text="设置中心"
     style="@style/TextStyle"/>
     <com.example.clark.safeprotecter.View.SettingItemView
+        android:id="@+id/update"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        clark:destitle="自动更新设置"
+        clark:deson="自动更新已开启"
+        clark:desoff="自动更新已关闭"
+        />
     <com.example.clark.safeprotecter.View.SettingItemView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

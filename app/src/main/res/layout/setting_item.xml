@@ -7,7 +7,6 @@
         android:id="@+id/Item_tx1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="自动更新设置"
         android:textSize="20sp"/>
     <TextView
         android:padding="5dp"
@@ -16,14 +15,19 @@
         android:id="@+id/Item_tx2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="自动更新已关闭"
         android:textSize="20sp"/>
+    <!--android:clickable="false"-->
+    <!--android:focusable="false"-->
+    <!--android:focusableInTouchMode="false"-->
+    <!--这三个属性防止CheckBox点击，使其不响应点击事件-->
     <CheckBox
-
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-       android:layout_centerVertical="true"
+        android:layout_centerVertical="true"
         android:id="@+id/check_box"/>
     <View
         android:layout_below="@id/Item_tx2"

@@ -5,6 +5,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -21,6 +22,7 @@ import java.util.List;
 
 import Model.GridDataBean;
 import Utils.ConstantValue;
+import Utils.Md5Utils;
 import Utils.MyAdapter;
 import Utils.SpUtils;
 
@@ -103,8 +105,9 @@ public class MainActivity extends AppCompatActivity {
                 String confirmPsd = et_confirmPsd.getText().toString();
 
                 if (!TextUtils.isEmpty(confirmPsd)) {
-                    String psd = SpUtils.getPassWord(getApplicationContext(),ConstantValue.MOBILE_SAFE_PSD,"");
-                    if (psd.equals(confirmPsd)) {
+                    String psd = SpUtils.getPassWord(getApplicationContext(), ConstantValue.MOBILE_SAFE_PSD, "");
+                    Log.i("MD5",psd);
+                    if (psd.equals(Md5Utils.encoder(confirmPsd))) {
                         //进入手机防盗模块，开启一个新的Activity
                         Intent intent = new Intent(getApplicationContext(), TestActivity.class);
                         startActivity(intent);
@@ -154,12 +157,15 @@ public class MainActivity extends AppCompatActivity {
                         //关闭对话框，跳入新的界面
                         dialog.dismiss();
                         //储存密码
-                        SpUtils.putPassWord(getApplicationContext(), ConstantValue.MOBILE_SAFE_PSD, psd);
+                        SpUtils.putPassWord(getApplicationContext(),
+                                ConstantValue.MOBILE_SAFE_PSD, Md5Utils.encoder(psd));
                     } else {
-                        Toast.makeText(getApplicationContext(), "两次输入密码不一致", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),
+                                "两次输入密码不一致", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(getApplicationContext(), "请输入密码", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),
+                            "请输入密码", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.i("MD5",psd);
                     if (psd.equals(Md5Utils.encoder(confirmPsd))) {
                         //进入手机防盗模块，开启一个新的Activity
-                        Intent intent = new Intent(getApplicationContext(), TestActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), StepOverActivity.class);
                         startActivity(intent);
                         //关闭对话框，跳入新的界面
                         dialog.dismiss();
@@ -152,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(psd) && !TextUtils.isEmpty(confirmPsd)) {
                     if (psd.equals(confirmPsd)) {
                         //进入手机防盗模块，开启一个新的Activity
-                        Intent intent = new Intent(getApplicationContext(), TestActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), StepOverActivity.class);
                         startActivity(intent);
                         //关闭对话框，跳入新的界面
                         dialog.dismiss();

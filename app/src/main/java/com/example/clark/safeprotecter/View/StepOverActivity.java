@@ -4,16 +4,16 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.clark.safeprotecter.R;
+
 /**
  * Created by clark on 2016/10/15.
  */
 
-public class TestActivity extends Activity {
+public class StepOverActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TextView textView = new TextView(this);
-        textView.setText("测试");
-        setContentView(textView);
+        setContentView(R.layout.step_over);
     }
 }

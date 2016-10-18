@@ -61,4 +61,29 @@ public class SpUtils {
         }
         return sp.getString(key,defValue);
     }
+    /**
+     *
+     * @param context
+     * @param key 存储节点名称
+     * @param value 存储节点的值boolean
+     */
+    public static void putSettingBoolean(Context context,String key,boolean value){
+        if (sp == null){
+            sp = context.getSharedPreferences("config",Context.MODE_PRIVATE);
+        }
+        sp.edit().putBoolean(key,value).commit();
+    }
+    /**
+     *
+     * @param context
+     * @param key 存储节点名称
+     * @param defValue 存储节点得默认值
+     * @return
+     */
+    public static boolean getSettingBoolean(Context context,String key,boolean defValue){
+        if (sp == null){
+            sp = context.getSharedPreferences("config",Context.MODE_PRIVATE);
+        }
+        return sp.getBoolean(key,defValue);
+    }
 }

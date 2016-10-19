@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.clark.safeprotecter">
-
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/security_icon"
@@ -19,6 +19,10 @@
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <activity android:name=".View.SettingActivity"></activity>
         <activity android:name=".View.StepOverActivity"></activity>
+        <activity android:name=".View.SettingFangDao01"></activity>
+        <activity android:name=".View.SettingFangDao02"></activity>
+        <activity android:name=".View.SettingFangDao03"></activity>
+        <activity android:name=".View.SettingFangDao04"></activity>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>

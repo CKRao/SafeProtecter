@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showDialog() {
         //判断本地是否保存密码（sp  ）
-        String psd = SpUtils.getPassWord(this, ConstantValue.MOBILE_SAFE_PSD, "");
+        String psd = SpUtils.getString(this, ConstantValue.MOBILE_SAFE_PSD, "");
         if (TextUtils.isEmpty(psd)) {
             //1.初始设置密码对话框
             showSetPsdDialog();
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 String confirmPsd = et_confirmPsd.getText().toString();
 
                 if (!TextUtils.isEmpty(confirmPsd)) {
-                    String psd = SpUtils.getPassWord(getApplicationContext(), ConstantValue.MOBILE_SAFE_PSD, "");
+                    String psd = SpUtils.getString(getApplicationContext(), ConstantValue.MOBILE_SAFE_PSD, "");
                     Log.i("MD5",psd);
                     if (psd.equals(Md5Utils.encoder(confirmPsd))) {
                         //进入手机防盗模块，开启一个新的Activity
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                         //关闭对话框，跳入新的界面
                         dialog.dismiss();
                         //储存密码
-                        SpUtils.putPassWord(getApplicationContext(),
+                        SpUtils.putString(getApplicationContext(),
                                 ConstantValue.MOBILE_SAFE_PSD, Md5Utils.encoder(psd));
                     } else {
                         Toast.makeText(getApplicationContext(),

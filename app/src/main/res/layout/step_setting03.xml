@@ -33,6 +33,7 @@
         android:hint="输入安全号码"/>
 
     <Button
+        android:id="@+id/id_choose_contacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="选择联系人"
@@ -86,6 +87,7 @@
             android:src="@drawable/smartphone1"/>
 
         <Button
+            android:id="@+id/id_before_03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -94,6 +96,7 @@
             android:textSize="20sp"/>
 
         <Button
+            android:id="@+id/id_next_03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

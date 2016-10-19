@@ -18,7 +18,8 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:id="@+id/checkBox"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -76,6 +77,7 @@
             android:src="@drawable/adb"/>
 
         <Button
+            android:id="@+id/id_before_04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -84,6 +86,7 @@
             android:textSize="20sp"/>
 
         <Button
+            android:id="@+id/id_accomplish_04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

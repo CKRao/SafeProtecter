@@ -42,7 +42,7 @@ public class SpUtils {
      * @param key 存储节点名称
      * @param value 存储节点的值String
      */
-    public static void putPassWord(Context context,String key,String value){
+    public static void putString(Context context,String key,String value){
         if (sp == null){
             sp = context.getSharedPreferences("config",Context.MODE_PRIVATE);
         }
@@ -55,35 +55,18 @@ public class SpUtils {
      * @param defValue 存储节点得默认值
      * @return 默认值或从节点获取到的值
      */
-    public static String getPassWord(Context context,String key,String defValue){
+    public static String getString(Context context,String key,String defValue){
         if (sp == null){
             sp = context.getSharedPreferences("config",Context.MODE_PRIVATE);
         }
         return sp.getString(key,defValue);
     }
-    /**
-     *
-     * @param context
-     * @param key 存储节点名称
-     * @param value 存储节点的值boolean
-     */
-    public static void putSettingBoolean(Context context,String key,boolean value){
+
+
+    public static void remove(Context context, String key) {
         if (sp == null){
             sp = context.getSharedPreferences("config",Context.MODE_PRIVATE);
         }
-        sp.edit().putBoolean(key,value).commit();
-    }
-    /**
-     *
-     * @param context
-     * @param key 存储节点名称
-     * @param defValue 存储节点得默认值
-     * @return
-     */
-    public static boolean getSettingBoolean(Context context,String key,boolean defValue){
-        if (sp == null){
-            sp = context.getSharedPreferences("config",Context.MODE_PRIVATE);
-        }
-        return sp.getBoolean(key,defValue);
+        sp.edit().remove(key).commit();
     }
 }

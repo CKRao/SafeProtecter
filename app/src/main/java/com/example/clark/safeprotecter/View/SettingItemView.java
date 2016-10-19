@@ -41,6 +41,7 @@ public class SettingItemView extends RelativeLayout {
         //初始化控件的自定义属性
         initAttrs(context,attrs);
         tx1.setText(mDestitle);
+        setCheck(false);
     }
 
     private void initAttrs(Context context,AttributeSet attrs) {

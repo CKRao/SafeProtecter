@@ -27,6 +27,7 @@
         android:textSize="23sp"/>
 
     <com.example.clark.safeprotecter.View.SettingItemView
+        android:id="@+id/id_sim_bound_checbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         clark:desoff="sim卡未绑定"
@@ -81,6 +82,7 @@
             android:src="@drawable/bind"/>
 
         <Button
+            android:id="@+id/id_before_02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -89,6 +91,7 @@
             android:textSize="20sp"/>
 
         <Button
+            android:id="@+id/id_next_02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

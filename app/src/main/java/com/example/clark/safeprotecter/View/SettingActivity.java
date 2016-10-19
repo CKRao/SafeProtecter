@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.example.clark.safeprotecter.R;
 
+import Utils.ConstantValue;
 import Utils.SpUtils;
 
 /**
@@ -24,7 +25,7 @@ public class SettingActivity extends Activity {
 
     private void initUpdate() {
         //获取自动更新条目是否已被选中
-        boolean OpenUpdate = SpUtils.getBoolean(this,"open_update",false);
+        boolean OpenUpdate = SpUtils.getBoolean(this, ConstantValue.OPEN_UPDATE,false);
         update = (SettingItemView) findViewById(R.id.update);
         //设置自动更新条目的状态
         update.setCheck(OpenUpdate);
@@ -36,7 +37,7 @@ public class SettingActivity extends Activity {
                 //对原有状态进行取反
                 //使得原先选中的状态变为未选中，原先未选中的变为选中
                 update.setCheck(!isChecked);
-                SpUtils.putBoolean(SettingActivity.this,"open_update",!isChecked);
+                SpUtils.putBoolean(SettingActivity.this,ConstantValue.OPEN_UPDATE,!isChecked);
             }
         });
     }

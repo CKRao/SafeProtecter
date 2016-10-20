@@ -33,6 +33,7 @@ public class SettingFangDao04 extends Activity {
                 Intent intent= new Intent(SettingFangDao04.this,SettingFangDao03.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(R.anim.pre_in_anim,R.anim.pre_out_anim);
             }
         });
         id_accomplish_04.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,7 @@ public class SettingFangDao04 extends Activity {
                     startActivity(intent);
                     finish();
                     SpUtils.putBoolean(getApplicationContext(), ConstantValue.STEP_OVER,true);
+                    overridePendingTransition(R.anim.next_in_anim,R.anim.next_out_anim);
                 }else {
                     Toast.makeText(getApplicationContext(),"请开启安全设置",Toast.LENGTH_SHORT).show();
                 }

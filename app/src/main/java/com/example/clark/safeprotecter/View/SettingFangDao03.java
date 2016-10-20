@@ -66,6 +66,7 @@ public class SettingFangDao03 extends Activity {
                 Intent intent = new Intent(SettingFangDao03.this, SettingFangDao02.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(R.anim.pre_in_anim,R.anim.pre_out_anim);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
@@ -77,6 +78,7 @@ public class SettingFangDao03 extends Activity {
                     startActivity(intent);
                     finish();
                     SpUtils.putString(getApplicationContext(), ConstantValue.CONTACT_NUMBER, phone);
+                    overridePendingTransition(R.anim.next_in_anim,R.anim.next_out_anim);
                 } else {
                     Toast.makeText(getApplicationContext(), "请输入电话号码", Toast.LENGTH_SHORT).show();
                 }

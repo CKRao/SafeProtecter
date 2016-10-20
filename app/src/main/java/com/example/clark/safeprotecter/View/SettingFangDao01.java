@@ -24,6 +24,8 @@ public class SettingFangDao01 extends Activity {
                 Intent intent = new Intent(SettingFangDao01.this,SettingFangDao02.class);
                 startActivity(intent);
                 finish();
+                //开启平移动画
+                overridePendingTransition(R.anim.next_in_anim,R.anim.next_out_anim);
             }
         });
     }

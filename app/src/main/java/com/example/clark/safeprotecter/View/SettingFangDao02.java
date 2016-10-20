@@ -57,6 +57,7 @@ public class SettingFangDao02 extends Activity {
                 Intent intent = new Intent(SettingFangDao02.this, SettingFangDao01.class);
                 startActivity(intent);
                 finish();
+                overridePendingTransition(R.anim.pre_in_anim,R.anim.pre_out_anim);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +67,7 @@ public class SettingFangDao02 extends Activity {
                     Intent intent = new Intent(SettingFangDao02.this, SettingFangDao03.class);
                     startActivity(intent);
                     finish();
+                    overridePendingTransition(R.anim.next_in_anim,R.anim.next_out_anim);
                 }else {
                     Toast.makeText(getApplicationContext(),"请绑定sim卡",Toast.LENGTH_SHORT).show();
                 }

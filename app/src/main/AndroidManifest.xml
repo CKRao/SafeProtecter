@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.clark.safeprotecter">
 <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/security_icon"
@@ -23,6 +24,7 @@
         <activity android:name=".View.SettingFangDao02"></activity>
         <activity android:name=".View.SettingFangDao03"></activity>
         <activity android:name=".View.SettingFangDao04"></activity>
+        <activity android:name=".View.Contacts"></activity>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>

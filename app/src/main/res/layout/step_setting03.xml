@@ -28,6 +28,7 @@
         android:textSize="23sp"/>
 
     <EditText
+        android:id="@+id/et_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="输入安全号码"/>

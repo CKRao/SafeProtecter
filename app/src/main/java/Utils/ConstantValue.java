@@ -9,4 +9,6 @@ public class ConstantValue {
     public static final String STEP_OVER = "step_over";
     public static final String OPEN_UPDATE = "open_update";
     public static final String SIM_BOUND = "sim_bound";
+    public static final String CONTACT_NUMBER = "contact_number";
+    public static final String OPEN_SECURITY = "open_security";
 }
